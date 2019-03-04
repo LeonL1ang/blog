@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: blog-base
+  datasource:
+    url: jdbc:mysql://47.101.221.215:3306/blog?characterEncoding=UTF8
+    username: root
+    password: rootblog
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true  # 自动创建数据库表
+  redis:
+    host: 47.101.221.215
+    port: 6379
+server:
+  port: 8502
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true   # 注册服务使用ip地址进行注册

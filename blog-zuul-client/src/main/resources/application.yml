@@ -1,0 +1,25 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: blog-zuul-client   # 客户端访问的zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8686/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    blog-auth:
+      path: /auth/**
+      serviceId: blog-auth
+    blog-base:
+      path: /base/**
+      serviceId: blog-base
+  servlet-path: /
+blog:
+  conf:
+    router:
+      userLoginUrl:
+        - /auth/user/getInfo

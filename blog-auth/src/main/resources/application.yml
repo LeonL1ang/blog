@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: blog-auth
+  datasource:
+    url: jdbc:mysql://47.101.221.215:3306/blog?characterEncoding=UTF8
+    username: root
+    password: blogroot
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+  rabbitmq:
+    host: 47.101.221.215
+  redis:
+    host: 47.101.221.215
+    port: 6379
+server:
+  port: 8501
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8686/eureka/
+  instance:
+    prefer-ip-address: true
+jwt:
+  config:
+    key: ERTYE_FEGYRTYEW_RWER
+    ttl: 7200000  # token过期时间2小时

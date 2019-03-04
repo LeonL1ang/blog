@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: blog-eureka
+server:
+  port: 8686
+eureka:
+  client:
+    register-with-eureka: false  # 服务器不用注册到服务器
+    fetch-registry: false   # 服务器不需要获取注册信息
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka/   # server.port = 6868

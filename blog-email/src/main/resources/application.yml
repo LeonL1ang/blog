@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: blog-email
+  rabbitmq:
+    host: 47.101.221.215
+  mail:
+    username: 921027074@qq.com
+    password: oysdrcuntrgnbdie  #  邮箱的授权码
+    host: smtp.qq.com # 邮箱的smtp地址
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          enable: true # 开启安全连接，一些公司的邮箱必须开启
+          starttls:
+            enable: true
+            required: trus
+server:
+  port: 8503
